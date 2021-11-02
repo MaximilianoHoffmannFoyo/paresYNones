@@ -14,6 +14,7 @@ public class BAleatorio {
         int dedosCPU;
         int totalDedos;
         int seguir;
+        int dedosCorrectos = 0; 
         
         do{//inicio del bucle qu econtrola si se repite le juego
             do{//bucle para que se seleccione solo 1 o 2 y se repita si no 
@@ -26,29 +27,32 @@ public class BAleatorio {
                 }
             } while(ganador != 1 ? ganador != 2 : 1==2) ;
         
+            do{
+                System.out.println("");
+                System.out.println("Introduce número de dedos para jugar: ");
+                dedosJugador = entrada.nextInt();
+                if(dedosJugador>=1 && dedosJugador<=5){
+                    dedosCorrectos = 2;
+                } 
+            } while(!(dedosCorrectos == 2));
+            
+            dedosCPU = aleatorio.nextInt(5)+1;
+            System.out.println("La cpu saca: "+dedosCPU);
         
-            System.out.println("");
-        System.out.println("Introduce número de dedos para jugar: ");
-        dedosJugador = entrada.nextInt();
-        
-        
-        dedosCPU = aleatorio.nextInt(5)+1;
-        System.out.println("La cpu saca: "+dedosCPU);
-        
-        totalDedos = dedosJugador+dedosCPU;
-        if(totalDedos%2 == 0){
-            if(ganador == 1){
-                System.out.println("Ganas");
+            totalDedos = dedosJugador+dedosCPU;
+            if(totalDedos%2 == 0){
+                if(ganador == 1){
+                    System.out.println("Ganas");
+                }else{
+                    System.out.println("Pierdes");
+                }
             }else{
-                System.out.println("Pierdes");
+                if(ganador == 1){
+                    System.out.println("Pierdes");
+                }else{
+                    System.out.println("Ganas");
+                }
             }
-        }else{
-            if(ganador == 1){
-                System.out.println("Pierdes");
-            }else{
-                System.out.println("Ganas");
-            }
-        }
             System.out.println("");
             System.out.println("¿Quieres seguir jugando?");
             System.out.println("1='SI' o 2='NO'");
