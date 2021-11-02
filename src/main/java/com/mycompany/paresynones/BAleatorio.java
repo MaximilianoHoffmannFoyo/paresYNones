@@ -3,6 +3,8 @@ package com.mycompany.paresynones;
 import java.util.Random;
 import java.util.Scanner;
 
+//enlace al repositorio de GitHub:
+//https://github.com/MaximilianoHoffmannFoyo/paresYNones.git
 public class BAleatorio {
 
     public static void main(String[] args) {
@@ -44,7 +46,7 @@ public class BAleatorio {
                 }
             } while(!(dedosCorrectos == 2));
             
-            //uso de Scanner para sacar dedos del 1 a 5 de forma aleatoria  
+            //uso de Random para sacar dedos del 1 a 5 de forma aleatoria  
             dedosCPU = aleatorio.nextInt(5)+1;
             System.out.println("La cpu saca: "+dedosCPU);
             
