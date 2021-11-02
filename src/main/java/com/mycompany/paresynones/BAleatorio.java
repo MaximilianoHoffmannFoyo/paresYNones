@@ -15,11 +15,19 @@ public class BAleatorio {
         int totalDedos;
         int seguir;
         
-        do{
-        System.out.println("Jugador, elije: ");
-        System.out.println("1='pares' o 2='nones'");
-        ganador = entrada.nextInt();
+        do{//inicio del bucle qu econtrola si se repite le juego
+            do{//bucle para que se seleccione solo 1 o 2 y se repita si no 
+                System.out.println("");
+                System.out.println("Jugador, elije: ");
+                System.out.println("1='pares' o 2='nones'");
+                ganador = entrada.nextInt();
+                if(ganador != 1 || ganador != 2){
+                    
+                }
+            } while(ganador != 1 ? ganador != 2 : 1==2) ;
         
+        
+            System.out.println("");
         System.out.println("Introduce número de dedos para jugar: ");
         dedosJugador = entrada.nextInt();
         
@@ -41,6 +49,7 @@ public class BAleatorio {
                 System.out.println("Ganas");
             }
         }
+            System.out.println("");
             System.out.println("¿Quieres seguir jugando?");
             System.out.println("1='SI' o 2='NO'");
             seguir = entrada.nextInt(); 
