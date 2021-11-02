@@ -2,6 +2,8 @@ package com.mycompany.paresynones;
 
 import java.util.Scanner;
 
+//enlace al repositorio de GitHub:
+//https://github.com/MaximilianoHoffmannFoyo/paresYNones.git
 public class AManual {
     
     public static void main(String[] args) {
@@ -15,9 +17,16 @@ public class AManual {
         int dedosCorrectos = 0; 
         
         do{//inicio del bucle qu econtrola si se repite le juego
-            System.out.println("Que el jugador 1 elija: ");
-            System.out.println("1='pares' o 2='nones'");
-            ganador = entrada.nextInt();
+            do{//bucle para que se seleccione solo 1 o 2 y se repita si no 
+                System.out.println("");
+                System.out.println("Que el jugador 1 elija: ");
+                System.out.println("1='pares' o 2='nones'");
+                ganador = entrada.nextInt();
+                if(!(ganador == 1 || ganador == 2)){
+                    System.out.println("dato erroneo");
+                }
+            } while(ganador != 1 ? ganador != 2 : 1==2);
+                                    // el 1==2 es solo un booleano falso de relleno
         
             System.out.println("Jugador 1");
             System.out.println("Introduce número de dedos");
@@ -56,15 +65,7 @@ public class AManual {
     }
 }
     /*
-        //declaramos e inicializamos las variables y objetos necesarios
-        Scanner entrada = new Scanner(System.in);  
-        Random aleatorio = new Random();
-        int ganador;
-        int dedosJugador;
-        int dedosCPU;
-        int totalDedos;
-        int seguir;
-        int dedosCorrectos = 0; 
+       
         
         do{//inicio del bucle qu econtrola si se repite le juego
             do{//bucle para que se seleccione solo 1 o 2 y se repita si no 
