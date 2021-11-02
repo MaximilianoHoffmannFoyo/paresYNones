@@ -21,8 +21,8 @@ public class BAleatorio {
                 System.out.println("Jugador, elije: ");
                 System.out.println("1='pares' o 2='nones'");
                 ganador = entrada.nextInt();
-                if(ganador != 1 || ganador != 2){
-                    
+                if(!(ganador == 1 || ganador == 2)){
+                    System.out.println("dato erroneo");
                 }
             } while(ganador != 1 ? ganador != 2 : 1==2) ;
         
